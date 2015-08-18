@@ -37,23 +37,11 @@ function getComputerMove(move) {
 
 function getWinner(playerMove,computerMove) {
     var winner;
-    if (playMove == 'rock' && computerMove == 'scissors') {
+    if (playerMove == 'rock' && computerMove == 'scissors' || playerMove == 'paper' && computerMove == 'scissors' || playerMove == 'scissors' && computerMove == 'rock') {
         result = 'computer';
-    } else if (playerMove == 'paper' && computerMove = 'scissors') {
-        result = 'computer';
-    } else if (playerMove == 'scissors' && computerMove = 'rock') {
-        result = 'computer';
-    } else if (playerMove == 'rock' && computerMove = 'scissors') {
+    } else if (playerMove == 'rock' && computerMove == 'scissors' || playerMove == 'paper' && computerMove == 'rock' || playerMove == 'scissors' && computerMove == 'paper') {
         result = 'player';
-    } else if (playerMove == 'paper' && computerMove == 'rock') {
-        result = 'player';
-    } else if (playerMove == 'scissors' && computerMove == 'paper') {
-        result = 'player';
-    } else if (playerMove == 'rock' && computerMove == 'rock') {
-        result = 'tie';
-    } else if (playerMove == 'paper' && computerMove == 'paper') {
-        result = 'tie';
-    } else if (playerMove == 'scissors' && computerMove == 'scissors') {
+    } else if (playerMove == computerMove) {
         result = 'tie';
     }
     return winner;
@@ -63,6 +51,21 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+    var result;
+    while (playerMove < 5 && computerMove < 5) {
+        result (getWinner(getPlayerMove), (getComputerMove));
+    }
+    if (result == 'player') {
+        playerWins++
+    } else if (result == 'computer')
+        computerWins++
+    } else {
+        console.log('tie!');
+    }
+    console.log("The score is currently" + playerWins + "to" + computerWins + "\n");
+    } return (playerWins, computerWins);
+}
+    }
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
