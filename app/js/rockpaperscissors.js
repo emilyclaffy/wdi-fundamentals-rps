@@ -53,7 +53,7 @@ function playToFive() {
     var computerWins = 0;
     var result;
     while (playerMove < 5 && computerMove < 5) {
-        result (getWinner(getPlayerMove), (getComputerMove));
+        result getWinner(getPlayerMove()), getComputerMove()));
     }
     if (result == 'player') {
         playerWins++
