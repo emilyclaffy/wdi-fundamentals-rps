@@ -50,11 +50,11 @@ function getComputerMove(move) {
 function getWinner(playerMove,computerMove) {
     var winner;
     if (playerMove == 'rock' && computerMove == 'scissors' || playerMove == 'paper' && computerMove == 'scissors' || playerMove == 'scissors' && computerMove == 'rock') {
-        result = 'computer';
+        result winner = 'computer';
     } else if (playerMove == 'rock' && computerMove == 'scissors' || playerMove == 'paper' && computerMove == 'rock' || playerMove == 'scissors' && computerMove == 'paper') {
-        result = 'player';
+        result winner = 'player';
     } else if (playerMove == computerMove) {
-        result = 'tie';
+        result winner = 'tie';
     }
     return winner;
 }
